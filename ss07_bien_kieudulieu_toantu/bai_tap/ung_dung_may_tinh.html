@@ -2,9 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<h1>Calculator</h1>
+<form>
+    <input type="text" id="number1" value="12"/>
+    <input type="text" id="number2" value="12"/><br><br>
+    <button onclick="cong()">Addition(+)</button>
+    <button onclick="tru()">Subtraction(-)</button>
+    <button onclick="nhan()">Multiplication(x)</button>
+    <button onclick="chia()">Division(/)</button><br>
+    <p id="result"></p>
+</form>
+<script>
+    function cong() {
+    let a = document.getElementById("number1").value;
+    let b = document.getElementById("number2").value;
+    let cong= parseInt(a) + parseInt(b);
+        document.getElementById("result").innerText=("Result Addition: " + cong);
+        }
+    function tru() {
+        let a = document.getElementById("number1").value;
+        let b = document.getElementById("number2").value;
+        let tru= parseInt(a) - parseInt(b);
+        document.getElementById("result").innerText=("Result Subtraction: " + tru);
+    }
+    function nhan() {
+        let a = document.getElementById("number1").value;
+        let b = document.getElementById("number2").value;
+        let nhan= parseInt(a) * parseInt(b);
+        document.getElementById("result").innerText=("Result Multiplication: " + nhan);
+    }
+    function chia() {
+        let a = document.getElementById("number1").value;
+        let b = document.getElementById("number2").value;
+        let chia= parseInt(a) / parseInt(b);
+        document.getElementById("result").innerText=("Result Division: " + chia);
+    }
+</script>
 </body>
 </html>
