@@ -6,7 +6,6 @@
 </head>
 <body>
 <h1>Calculator</h1>
-<form>
     <input type="text" id="number1" value="12"/>
     <input type="text" id="number2" value="12"/><br><br>
     <button onclick="cong()">Addition(+)</button>
@@ -14,7 +13,6 @@
     <button onclick="nhan()">Multiplication(x)</button>
     <button onclick="chia()">Division(/)</button><br>
     <p id="result"></p>
-</form>
 <script>
     function cong() {
     let a = document.getElementById("number1").value;
@@ -37,8 +35,8 @@
     function chia() {
         let a = document.getElementById("number1").value;
         let b = document.getElementById("number2").value;
-        let chia= parseInt(a) / parseInt(b);
-        document.getElementById("result").innerText=("Result Division: " + chia);
+        let chia = parseInt(a) / parseInt(b);
+        document.getElementById("result").innerText = ("Result Division: " + chia);
     }
 </script>
 </body>
