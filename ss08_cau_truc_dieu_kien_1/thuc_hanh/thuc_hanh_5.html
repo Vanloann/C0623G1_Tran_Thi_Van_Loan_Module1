@@ -2,9 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Toan tu 3 ngoi</title>
 </head>
 <body>
-$END$
+<script>
+    let login = prompt("Enter: ");
+    let message = (login == 'Employee') ?
+        'Hello' :
+        (login == 'Director') ?
+            'Greetings' :
+            (login == '') ?
+                'No login' :
+                '';
+    alert(message);
+</script>
+
+<!--<script>-->
+<!--    let a = + prompt("Nhap so a: ");-->
+<!--    let b = + prompt("Nhap so b: ");-->
+<!--    let c = a + b;-->
+<!-- result = (c < 4) ? 'Below' : 'Over';-->
+<!-- document.write(result);-->
+
+<!--<script>-->
+<!--    let a = + prompt("Nhap so a: ");-->
+<!--    let b = + prompt("Nhap so b: ");-->
+<!--    let c = a + b;-->
+<!--    if (c < 4) {-->
+<!--        alert("Below");-->
+<!--    } else {-->
+<!--        alert("Over");-->
+<!--    }-->
+<!--</script>-->
 </body>
 </html>
