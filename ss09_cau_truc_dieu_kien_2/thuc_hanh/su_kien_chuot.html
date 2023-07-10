@@ -2,9 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<form>
+    <img src="https://i.pinimg.com/564x/3f/57/a8/3f57a865776803a324496b365ddc17d0.jpg" style="width: 400px" id="image"/>
+    <p>Click button below to move the image to right</p>
+    <input onclick="moveRight()" type="button" value="Click Me"/>
+</form>
+<!--<script>-->
+<!--    let imgObj = null;-->
+<!--    imgObj = document.getElementById('image');-->
+
+<!--    function init() {-->
+<!--        imgObj = document.getElementById('image');-->
+<!--        imgObj.style.position = 'relative';-->
+<!--        imgObj.style.left = '0px';-->
+<!--    }-->
+
+<!--    function moveRight() {-->
+<!--        imgObj.style.left = parseInt(imgObj.style.left) + 10 + 'px';-->
+<!--        console.log(imgObj.style.left)-->
+<!--    }-->
+
+<!--    window.onload = init();-->
+<!--    -->
+<!--</script>-->
+<script>
+    let imgobj = document.getElementById("image");
+
+    function init() {
+        imgObj = document.getElementById('image');
+        imgobj.style.margin = '0px';
+    }
+
+    function moveRight() {
+        imgobj.style.marginLeft = parseInt(imgobj.style.marginLeft) + 20 + 'px';
+        console.log(imgobj.style.marginLeft)
+    }
+
+    window.onload = init();
+
+</script>
 </body>
 </html>
