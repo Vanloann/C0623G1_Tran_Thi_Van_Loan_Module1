@@ -2,9 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<h1> Tinh chi so can nang</h1>
+<table>
+    <tr>
+        <td>Nhap can nang:(kg)</td>
+        <td><input id="w" type="text" name="weight"/></td>
+    </tr>
+    <tr>
+        <td>Nhap chieu cao:(m)</td>
+        <td><input id="h" type="text" name="height"/></td>
+    </tr>
+</table>
+<button onclick="kiemtra()" name="kiemtra">Kiem tra</button>
+<p id="result"></p>
+<script>
+    function kiemtra() {
+        let w = document.getElementById('w').value;
+        let h = document.getElementById('h').value;
+        let h2 = Math.pow(h,2);
+        let bmi = parseFloat(w)/parseFloat(h2);
+        if (bmi < 18.5)
+            document.getElementById('result').innerText = 'Underweight';
+        else if (bmi < 25.0)
+            document.getElementById('result').innerText = 'Normal';
+        else if (bmi < 30.0)
+            document.getElementById('result').innerText = 'Overweight';
+        else
+            document.getElementById('result').innerText = 'Obese';
+    }
+</script>
+
 </body>
 </html>

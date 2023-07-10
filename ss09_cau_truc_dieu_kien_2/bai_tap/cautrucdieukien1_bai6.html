@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let doanhthu = + prompt("Nhập doanh thu: ");
+    let bac1 = 5/100;
+    let bac2 = 7/100;
+    let bac3 = 10/100;
+    if (doanhthu <= 100000000) {
+        document.write("Tiền hoa hồng: " + (doanhthu * bac1));
+    } else if (doanhthu <= 110000000) {
+        document.write("Tiền hoa hông: " + (doanhthu * bac2));
+    } else {
+        document.write("Tiền hoa hồng: " + (doanhthu * bac3));
+    }
+</script>
+</body>
+</html>

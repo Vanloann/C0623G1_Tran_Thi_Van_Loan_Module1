@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let kiemtra = + prompt("Nhập điểm kiểm tra: ");
+    let giuaki = + prompt("Nhập điểm thi giữa kì: ");
+    let cuoiki = + prompt("Nhập điểm thi cuối kì: ");
+    let trungbinhcong = parseFloat((kiemtra + giuaki + cuoiki)/3);
+    if (trungbinhcong >= 8) {
+        document.write("Loại giỏi");
+    } else if (trungbinhcong >= 6.5) {
+        document.write("Loại khá");
+    } else if (trungbinhcong >= 5) {
+        document.write("Loại trung bình")
+    } else {
+        document.write("Loại yếu");
+    }
+</script>
+</body>
+</html>

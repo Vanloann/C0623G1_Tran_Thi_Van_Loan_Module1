@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //    bai11
+    let money = parseFloat(prompt("Nhập số tiền "));
+    let month = parseFloat(prompt("Nhập số tháng "));
+    let r1 = (money*0.03)/month;
+    let r2 = (money*0.08)/month;
+    let r3 = (money*0.1)/month;
+    if (month>=12 && month<=24) {
+        alert("Lãi suất: " + r3);
+    } else if (month < 12) {
+        alert("Lãi suất: " + r2);
+    } else if (month <= 6) {
+        alert("Lãi suất: " + r1);
+    }
+</script>
+</body>
+</html>

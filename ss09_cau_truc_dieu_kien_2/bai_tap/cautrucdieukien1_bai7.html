@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let minute = parseInt(prompt("Nhập số phút "));
+    const phitb = 25000;
+    if (minute <= 50) {
+        document.write("Số tiền: " + (phitb+(600 * minute)) + " đồng");
+    } else if (minute < 200) {
+        document.write("Số tiền: " + (phitb+(600 * 50)+(400 * (minute - 50))) + " đồng");
+    } else if (minute >= 200) {
+        document.write("Số tiền: " + (phitb+(600 * 50)+(400 * 150)+(200 * (minute - 200)))+ " đồng");
+    } else {
+        document.write("");
+    }
+</script>
+</body>
+</html>

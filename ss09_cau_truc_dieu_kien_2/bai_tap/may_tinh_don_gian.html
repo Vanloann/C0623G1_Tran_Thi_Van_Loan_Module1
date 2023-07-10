@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<div style="border: 8px solid black; width: 300px; margin: 0 auto" >-->
+<!--    <form>-->
+<!--            <input type="text" id="result" name="result" value="1"/>-->
+<!--<table>-->
+<!--    <tr>-->
+<!--        <td><button name="number1" value="number1" onclick="">1</button></td>-->
+<!--        <td><button name="number2" value="number2">2</button></td>-->
+<!--        <td><button name="number3" value="number3">3</button></td>-->
+<!--        <td><button name="cong" value="cong">+</button></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td><button name="number4" value="number4" onclick="">4</button></td>-->
+<!--        <td><button name="number5" value="number5">5</button></td>-->
+<!--        <td><button name="number6" value="number6">6</button></td>-->
+<!--        <td><button name="tru" value="tru">-</button></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td><button name="number7" value="number7" onclick="">7</button></td>-->
+<!--        <td><button name="number8" value="number8">8</button></td>-->
+<!--        <td><button name="number9" value="number9">9</button></td>-->
+<!--        <td><button name="nhan" value="*">x</button></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--    <td><button name="delete" value="delete" onclick="">C</button></td>-->
+<!--    <td><button name="number0" value="number0">0</button></td>-->
+<!--    <td><button name="bang" value="bang">=</button></td>-->
+<!--    <td><button name="chia" value="chia">/</button></td>-->
+<!--    </tr>-->
+<!--</table>-->
+<!--</form>-->
+<!--</div>-->
+<input type="text" id="view"><br><br>
+<div class="thang">
+    <table>
+        <tr>
+            <td><button type="button" name="btn" value ="1" onclick="inputValue(this.value)"> 1 </button></td>
+            <td><button type="button" name="btn" value ="2" onclick="inputValue(this.value)"> 2 </button></td>
+            <td><button type="button" name="btn" value ="3"  onclick="inputValue(this.value)"> 3 </button></td>
+            <td><button type="button" name="op" value ="+" onclick="inputValue(this.value)"> + </button></td>
+        </tr>
+
+        <tr>
+            <td><button type="button" name="btn" value ="4" onclick="inputValue(this.value)"> 4 </button></td>
+            <td><button type="button" name="btn" value ="5" onclick="inputValue(this.value)"> 5 </button></td>
+            <td><button type="button" name="btn" value ="6" onclick="inputValue(this.value)"> 6 </button></td>
+            <td><button type="button" name="op" value ="-" onclick="inputValue(this.value)"> - </button></td>
+        </tr>
+        <tr>
+            <td><button type="button" name="btn" value ="7" onclick="inputValue(this.value)"> 7 </button></td>
+            <td><button type="button" name="btn" value ="8" onclick="inputValue(this.value)"> 8 </button></td>
+            <td><button type="button" name="btn" value ="9" onclick="inputValue(this.value)"> 9</button></td>
+            <td><button type="button" name="op" value ="*" onclick="inputValue(this.value)"> * </button></td>
+        </tr>
+        <tr>
+            <td><button type="button" onclick="xoa();"> C </button></td>
+            <td><button type="button" name="btn" onclick="inputValue(this.value)"> 0 </button></td>
+            <td><button  name= "reusult" onclick="result();"> = </button></td>
+            <td><button type="button" name="op" value ="/" onclick="inputValue(this.value)"> / </button></td>
+        </tr>
+    </table>
+
+</div>
+<script>
+let view = document.getElementById("view");
+function inputValue(value) {
+view.value += value;
+}
+function result() {
+let result = eval(view.value);
+view.value = result;
+}
+function xoa() {
+view.value="";
+}
+</script>
+</body>
+</html>
