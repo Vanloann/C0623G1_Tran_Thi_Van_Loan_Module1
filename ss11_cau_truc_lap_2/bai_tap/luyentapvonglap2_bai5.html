@@ -6,26 +6,16 @@
 </head>
 <body>
 <script>
-    // let money = +prompt("Nhập số tiền ban đầu (triệu đồng): ");
-    // let month = +prompt("Nhập số tháng cho vay: ");
-    // let interest = +prompt("Nhập lãi suất năm: ");
-    // let interestPerMonth = 0;
-    // let sum = 0;
-    // for (let i = 1; i <= month; i++) {
-    //     interestPerMonth = (money * (interest / 100)) / 12;
-    //     sum += interestPerMonth;
-    // }
-    // document.write("Tiền lãi phải trả " + sum);
-    let money = parseFloat(prompt("Nhập số tiền "));
+    let presentValue = parseFloat(prompt("Nhập số tiền gửi "));
     let month = parseFloat(prompt("Nhập số tháng "));
-    let tienlaisau1thang = 0;
-    let tonglai = tienlaisau1thang;
+    let interest = parseFloat(prompt("Nhập lãi suất/tháng "));
+    let futureValue = 0;
     for (let i = 1; i <= month; i++) {
-        tienlaisau1thang += (money * 0.06);
-        tonglai += tienlaisau1thang;
-        sum = 
+        futureValue = presentValue * interest + presentValue;
+        presentValue = futureValue;
     }
-    document.write("Số tiền lãi sau " + month + " tháng là: " + tonglai);
+    document.write("Số tiền lãi sau " + month + " tháng là: " + futureValue + " đồng");
 </script>
+
 </body>
 </html>
