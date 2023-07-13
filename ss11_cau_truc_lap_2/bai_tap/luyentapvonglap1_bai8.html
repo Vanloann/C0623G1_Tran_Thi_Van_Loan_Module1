@@ -12,7 +12,6 @@
         let canTren = +prompt("Nhập cận trên: ");
         let random = Math.round(Math.random() * (canTren - canDuoi) + canDuoi);
         let soLan = 1;
-        console.log(random);
         do {
             let number = +prompt("Nhập số bạn dự đoán ");
             if (number === random) {
@@ -26,6 +25,7 @@
             if (soLan === 3) {
                 alert("Bạn đã hết số lượt chơi");
             }
+            soLan++;
         } while (soLan <= 3)
     }
 </script>
