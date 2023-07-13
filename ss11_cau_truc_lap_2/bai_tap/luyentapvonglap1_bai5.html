@@ -8,12 +8,12 @@
 <script>
     let n1 = 0;
     let n2 = 1;
-    let nextnumber;
+    let nextNumber;
     let sum = 0;
     for (let i = 0; i < 20; i++) {
-        nextnumber = n1 + n2;
+        nextNumber = n1 + n2;
         n1 = n2;
-        n2 = nextnumber;
+        n2 = nextNumber;
         sum += n1;
     }
     document.write(sum);
