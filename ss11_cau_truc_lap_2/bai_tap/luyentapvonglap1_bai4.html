@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let fibonacci = "";
+    let n1 = 0;
+    let n2 = 1;
+    let nextNumber;
+    let firstFibDivBy5;
+    for (let i = 0; i < 20 ; i++) {
+        nextNumber = n1 + n2;
+        fibonacci += n1 + " ";
+        n1 = n2;
+        n2 = nextNumber;
+        if (n1 % 5 === 0){
+            firstFibDivBy5 = n1;
+            break;
+        }
+    }
+    document.write(fibonacci + "<br/>" );
+    document.write("Số đầu tiên trong dãy fibonacci chia hết cho 5 là: " + firstFibDivBy5);
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = + prompt("Nhập n số đầu tiên trong dãy fibonacci ");
+    let fibonacci = "";
+    let n1 = 0;
+    let n2 = 1;
+    let nextnumber;
+    for (let i = 0; i < number ; i++) {
+        nextnumber = n1 + n2;
+        fibonacci += n1 + " ";
+        n1 = n2;
+        n2 = nextnumber;
+    } document.write(fibonacci);
+</script>
+</body>
+</html>

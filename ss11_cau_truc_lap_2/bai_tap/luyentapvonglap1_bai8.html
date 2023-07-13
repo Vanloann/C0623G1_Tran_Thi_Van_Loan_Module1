@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="playGame()">Start</button>
+<script>
+    function playGame() {
+        let canDuoi = +prompt("Nhập cận dưới: ");
+        let canTren = +prompt("Nhập cận trên: ");
+        let random = Math.round(Math.random() * (canTren - canDuoi) + canDuoi);
+        let soLan = 1;
+        console.log(random);
+        do {
+            let number = +prompt("Nhập số bạn dự đoán ");
+            if (number === random) {
+                alert("Bạn đã đoán đúng!!!");
+            } else if (number < random) {
+                alert("Số bạn nhập bé hơn");
+            } else {
+                alert("Số bạn nhập lớn hơn");
+            }
+            if (soLan === 3) {
+                alert("Bạn đã hết số lượt chơi");
+            }
+        } while (soLan <= 3)
+    }
+</script>
+</body>
+</html>
