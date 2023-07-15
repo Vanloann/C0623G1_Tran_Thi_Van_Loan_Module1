@@ -6,21 +6,21 @@
 </head>
 <body>
 <script>
-    let num = +prompt("Nhập n số nguyên tố đầu tiên ");
+    let num = +prompt("Nhập n số nguyên tố đầu tiên bạn muốn hiển thị ");
     let count = 0;
-    let n = 2;
+    let primeNumber = 2;
     while (count < num) {
-        let uoc = 0;
-        for (let i = 1; i <= n; i++) {
-            if (n % i === 0) {
-                uoc++;
+        let divisor = 0;
+        for (let i = 1; i <= primeNumber; i++) {
+            if (primeNumber % i === 0) {
+                divisor++;
             }
         }
-        if (uoc === 2) {
-            document.write(n + "<br/>");
+        if (divisor === 2) {
+            document.write(primeNumber + "<br/>");
             count++;
         }
-        n++;
+        primeNumber++;
     }
 </script>
 </body>

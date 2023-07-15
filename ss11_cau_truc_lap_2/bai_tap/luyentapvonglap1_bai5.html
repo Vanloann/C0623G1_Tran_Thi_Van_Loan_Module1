@@ -8,15 +8,21 @@
 <script>
     let n1 = 0;
     let n2 = 1;
+    let fib = "";
     let nextNumber;
     let sum = 0;
     for (let i = 0; i < 20; i++) {
         nextNumber = n1 + n2;
+        fib += n1 + " ";
         n1 = n2;
         n2 = nextNumber;
         sum += n1;
     }
-    document.write(sum);
+    document.write("20 số đầu tiên trong dãy fibonacci: " + fib + "<br/>");
+    document.write("Tổng 20 số đầu tiên trong dãy fibonacci: " + sum);
+
+
+
 </script>
 </body>
 </html>
