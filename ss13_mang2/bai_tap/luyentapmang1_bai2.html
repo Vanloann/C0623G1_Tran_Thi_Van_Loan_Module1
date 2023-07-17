@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numbers = [2, 56, 14, 9, 8, 23, 78, 0, 20, 41];
+    let max = numbers[0];
+    let index;
+    for (let i = 1; i <= numbers.length; i++) {
+        if (numbers[i] > max) {
+            max = numbers[i];
+            index = i;
+        }
+    }
+    document.write("Phần tử có giá trị lớn nhất là: " + max + "<br/>");
+    document.write("Vị trí: " + index);
+</script>
+</body>
+</html>

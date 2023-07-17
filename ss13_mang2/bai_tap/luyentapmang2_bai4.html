@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let string = prompt("Nhập chuỗi ký tự: ");
+    let count = 0;
+    for (let i = 0; i < string.length - 1 ; i++) {
+        if (string[i] === " " && string[i + 1] !== " ") {
+            count++;
+        }
+    }
+    document.write("Số từ trong chuỗi là: " + (count + 1));
+
+//    Cách 2
+// let arr = string.split(" ");
+// document.write(arr.length)
+</script>
+</body>
+</html>

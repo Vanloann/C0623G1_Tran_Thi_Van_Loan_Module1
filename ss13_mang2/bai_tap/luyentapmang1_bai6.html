@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let arr = [2,56,14,9,8,23,78,0,20,41];
+    // let newArr = "V";
+    // for (let i = 0; i < arr.length ; i++) {
+    //     if (arr[i] === newArr) {
+    //         document.write("V is in the array");
+    //     } else {
+    //         document.write("V is not in the array");
+    //     }
+    // }
+    let number = +prompt("Nhập số nguyên V ");
+    let arr = [10, 3, 45, 1, 6, 65, 23, 0, 20, 41];
+    let count = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (number === arr[i]) {
+            alert("V is in the array");
+        } else {
+            alert(" V is not found");
+            break;
+        }
+    }
+</script>
+</body>
+</html>
