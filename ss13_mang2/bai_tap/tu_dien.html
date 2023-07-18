@@ -13,20 +13,15 @@
         let engWords = ["dolphin", "penguin", "dragonfly", "dinosaur", "cock"];
         let vieWords = ["cá heo", "chim cánh cụt", "chuồn chuồn", "khủng long", "gà trống"];
         let string = document.getElementById("word").value;
-        let indexEng = 0;
         let result = "";
         for (let i = 0; i < engWords.length; i++) {
             if (engWords[i] === string) {
-                indexEng = i;
-                for (let j = 0; j < vieWords.length; j++) {
-                    if (indexEng === j) {
-                        result = vieWords[j];
-                    // } else  {
-                    //     alert("Từ này chưa được cập nhật trong từ điển");
-                    //     break;
-                    }
-                }
+                result = vieWords[i];
             }
+                // else {
+            //     alert("Từ này chưa được cập nhật trong từ điển");
+            //     break;
+            // }
         }
         document.getElementById("result").innerHTML = result;
     }
