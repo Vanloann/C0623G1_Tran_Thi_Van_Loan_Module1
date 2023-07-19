@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = + (prompt("Nhập số nguyên dương: "));
+
+    function factorial(number) {
+        let n = 1;
+        // if (number < 0) {
+        //     alert("Vui lòng nhập đúng số nguyên dương");
+        // } else {
+        for (let i = 1; i <= number; i++) {
+                 n *= i;
+        }
+        return n;
+    }
+    let result = factorial(number);
+    document.write("Giai thừa của " + number + " là: " + result);
+</script>
+</body>
+</html>
