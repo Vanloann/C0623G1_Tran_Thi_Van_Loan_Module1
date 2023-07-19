@@ -8,31 +8,22 @@
 <script>
     let starName = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"]
     let constellation = ["Ursa Minor", "Taurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"]
-    let str = prompt("Enter name of star: ");
+    let name = prompt("Enter name of star ");
 
-    function findStarName(str) {
-        let index_starName;
-        let result = "";
+    function findStarName(name) {
+        let index = -1;
         for (let i = 0; i < starName.length; i++) {
-            if (str === starName[i]) {
-                index_starName = i;
-            } else {
-                result = "This star cannot found";
-                return result;
+            if (name === starName[i]) {
+                index++;
+                return constellation[i];
             }
         }
-        for (let j = 0; j < constellation.length; j++) {
-            if (index_starName === j) {
-                result = constellation[j];
-                return result;
-            } else {
-                result = "This star cannot found";
-                return result;
-            }
+        if (index < 0) {
+            return "This star is not found";
         }
     }
 
-    let result = findStarName(str);
+    let result = findStarName(name);
     document.write(result);
 
 </script>

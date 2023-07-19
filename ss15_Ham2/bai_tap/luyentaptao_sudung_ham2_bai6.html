@@ -6,17 +6,17 @@
 </head>
 <body>
 <script>
-    let string = prompt("Nhập nội dung ");
+    let num = +prompt("Enter number: ");
 
-    function checkNumber(num) {
-        if (num % 1 === 0) {
+    function checkNumber(str) {
+        if (num > 0) {
             return true;
         } else {
             return false;
         }
     }
 
-    let result = checkNumber(string);
+    let result = checkNumber(num);
     document.write(result);
 </script>
 </body>

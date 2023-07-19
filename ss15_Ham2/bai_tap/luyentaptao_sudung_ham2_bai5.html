@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let size = +prompt("Enter length of array: ");
+    let arr = [];
+    for (let i = 0; i < size; i++) {
+        arr[i] = +prompt("Enter elements of array ");
+    }
+
+    function minNumber(arr) {
+        let min = arr[0];
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] < min) {
+                min = arr[i];
+                return min
+            }
+        }
+    }
+
+    let result = minNumber(arr);
+    document.write("Min number is: " + result);
+</script>
+</body>
+</html>
