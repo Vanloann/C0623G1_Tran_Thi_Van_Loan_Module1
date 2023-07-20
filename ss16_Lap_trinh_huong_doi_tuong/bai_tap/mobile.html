@@ -6,8 +6,8 @@
 </head>
 <body>
 <script>
-    class Mobile{
-        constructor(name, battery, draft, inbox, outbox, status ) {
+    class Mobile {
+        constructor(name, battery, draft, inbox, outbox, status) {
             this.name = name;
             this.battery = battery;
             this.draft = draft;
@@ -25,18 +25,18 @@
             this.battery--;
         }
 
-        turnOn() {
+        powerOn() {
             if (this.status) {
-                alert("Your" + this.name + " is On");
+                alert("Your " + this.name + " is On");
             } else {
                 this.status = true;
                 this.battery--;
             }
         }
 
-        turnOff() {
+        powerOff() {
             if (this.status) {
-                alert("Your" + this.name + " is Off");
+                alert("Your " + this.name + " is Off");
             } else {
                 this.status = false;
                 this.battery--;
@@ -52,18 +52,43 @@
                 this.draft.unshift(message);
                 this.battery--;
             } else {
-                alert("You need to turn on your phone first");
+                alert("You need to turn on your phone before sending Message");
             }
         }
 
-        sendMessage(message, targetMobile) {
+        sendMessage(message, toMobile) {
             if (this.status) {
-                this.outbox
+                this.outbox.unshift(message);
+                toMobile.inbox.unshift(message);
+                this.battery--;
+            } else {
+                alert("Your " + this.name + " is Off");
             }
         }
-
-
     }
+
+    let samsung = new Mobile("Samsung Galaxy", 80, [], [], [], false);
+    let iphone = new Mobile("Iphone 11", 95, [], [], [], false);
+
+    samsung.setDraftMsg();
+    samsung.powerOn();
+    samsung.checkStatus();
+    samsung.sendMessage("Hi! How's it going?", iphone);
+    console.log(samsung.battery);
+
+    iphone.checkStatus();
+    iphone.powerOn();
+    console.log(iphone.inbox);
+    iphone.sendMessage("Good. Wanna go swimming this Sunday?", samsung);
+    console.log(samsung.inbox);
+    samsung.sendMessage("Yup!!!", iphone);
+
+    console.log(iphone.inbox);
+
+    console.log("Samsung's battery: " + samsung.battery);
+    console.log("Iphone's battery: " + iphone.battery);
+
+
 </script>
 </body>
 </html>
