@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="200" height="100"></canvas>
+<script>
+    class Rectangle {
+        constructor(height, width) {
+            this.height = height;
+            this.width = width;
+        }
+
+        setHeight(newHeight) {
+            this.height = newHeight;
+        }
+
+        setWidth(newWidth) {
+            this.width = newWidth;
+        }
+
+        getHeight() {
+            return this.height;
+        }
+
+        getWidth() {
+            return this.width;
+        }
+
+        getArea() {
+            return this.height * this.width;
+        }
+
+        getPerimeter() {
+            return (this.height + this.width) * 2;
+        }
+
+    }
+
+    function getRandomHex() {
+        return Math.floor(Math.random() * 100);
+    }
+        function getRandomColor() {
+            let red = getRandomHex();
+            let green = getRandomHex();
+            let blue = getRandomHex();
+            return "rgb(" + red + "," + blue + "," + green + ")";
+        }
+    function createRectangle() {
+        let ctx = document.getElementById("myCanvas").getContext("2d");
+        let color = getRandomColor();
+        ctx.fillStyle = color;
+        ctx.fillRect(30, 40, rectangle.width, rectangle.height);
+    }
+
+        let rectangle = new Rectangle(5, 10);
+        rectangle.setHeight(500);
+        rectangle.setWidth(1000);
+        document.write("Area: " + rectangle.getArea() + "<br/>");
+        document.write("Perimeter: " + rectangle.getPerimeter());
+
+        createRectangle();
+
+</script>
+</body>
+</html>
