@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor() {
+        }
+
+        setWeight(newWeight) {
+            this.weight = newWeight;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        isEmpty() {
+            if (this.weight <= 0) {
+                console.log("hết táo");
+                return true;
+            } else {
+                console.log("còn táo");
+                return false;
+            }
+        }
+
+        decreaseApple() {
+            if (this.isEmpty()) {
+                document.write("Hết táo");
+            } else {
+                this.weight--;
+            }
+        }
+    }
+
+    class Human {
+        constructor() {
+        }
+
+        setName(newName) {
+            this.name = newName;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setWeight(newWeight) {
+            this.weight = newWeight;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        checkApple(apple) {
+            return apple.isEmpty();
+        }
+
+        eat(apple) {
+            if (apple.weight > 0) {
+                this.weight++;
+                apple.decreaseApple();
+            }
+        }
+
+        say(string) {
+            console.log(string);
+        }
+
+        setGender(newGender) {
+            this.gender = newGender;
+        }
+
+        isMale() {
+            if (this.gender === "Male") {
+                this.gender = "Male";
+                return true;
+            } else {
+                this.gender = "Female";
+                return false;
+            }
+        }
+    }
+
+    let apple = new Apple();
+    let adam = new Human();
+    let eva = new Human();
+
+    apple.setWeight(10);
+    console.log(apple.getWeight(), "đv");
+
+
+    adam.setName("Adam");
+    adam.setGender("Male");
+    adam.setWeight(70);
+    document.write(adam.getName() + ", " + adam.gender + ", " + adam.getWeight() + "kg" + "<br/>");
+    console.log(adam.isMale());
+
+
+    eva.setName("Eva");
+    eva.setGender("Female");
+    eva.setWeight(45);
+    document.write(eva.getName() + ", " + eva.gender + ", " + eva.getWeight() + "kg" + "<br/>");
+    console.log(eva.isMale());
+
+
+    while(apple.weight>0) {
+        adam.say("Adam mời Eva ăn táo");
+        eva.checkApple(apple);
+        eva.eat(apple);
+        document.write("Cân nặng của Eva sau khi ăn táo: " + eva.getWeight() + "kg" + ", " + "cân nặng của quả táo còn: " + apple.getWeight() + "đv" + "<br/>");
+        eva.say("Eva mời Adam ăn táo");
+        adam.checkApple(apple);
+        adam.eat(apple);
+        document.write("Cân nặng của Adam sau khi ăn táo: " + adam.getWeight() + "kg" + ", " + "cân nặng của quả táo còn: " + apple.getWeight() + "đv" + "<br/>");
+    }
+
+
+</script>
+</body>
+</html>
