@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <div id="game"></div>
+    <link rel="stylesheet" href="assets/icon.png">
+</head>
+<body>
+<script>
+    class Icon {
+        constructor(image, top, left, size) {
+            this.image = image;
+            this.top = top;
+            this.left = left;
+            this.size = size;
+        }
+
+        getElement() {
+            return '<img width="' + this.size + '"' + 'height="' + this.size + '"' + 'src="' + this.image + '"' + 'style="top: ' + this.top + 'px; left: ' + this.left + 'px; position: relative;"/>';
+        }
+
+        moveRight() {
+            this.left += 15;
+            // console.log(this.left);
+        }
+
+        moveLeft() {
+            this.left -= 15;
+            // console.log(this.left);
+        }
+
+        moveTop() {
+            this.top -= 15;
+            // console.log(this.top);
+        }
+
+        moveBottom() {
+            this.top += 15;
+            // console.log(this.top);
+        }
+    }
+
+    let icon = new Icon('assets/icon.png', 0, 0, 200);
+
+    function start() {
+        if (icon.left < window.innerWidth - icon.size && icon.top === 0) {
+            icon.moveRight();
+        } else if (icon.top < window.innerHeight - icon.size && icon.left > window.innerWidth - icon.size) {
+            icon.moveBottom();
+        } else if (icon.left > 0) {
+            icon.moveLeft();
+        } else {
+            icon.moveTop();
+        }
+        document.getElementById("game").innerHTML = icon.getElement();
+        setTimeout(start, 50);
+    }
+
+    start()
+</script>
+</body>
+</html>
