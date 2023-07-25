@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Menu</h1>
+<button onclick="order(1)" id="coffee">1. Coffee</button>
+<button onclick="order(2)" id="orange">2. Orange Juice</button>
+<button onclick="order(3)" id="carrot">3. Carrot Juice</button>
+<button onclick="order(4)" id="tomato">4. Tomato Juice</button>
+<button onclick="order(5)" id="water">5. Water</button>
+<button onclick="order(6)" id="coconut">6. Coconut</button>
+<br>
+<br>
+<!--<span>Unit price: <p id="price"></p></span>-->
+<!--<label>Quantity: <input id="quantity" type="number" ></label>-->
+<!--<button type="submit" onclick="enter()">Submit</button>-->
+<!--<br>-->
+<!--<span>Total: <p id="total"></p></span>-->
+<script>
+    // do {
+        function order(number) {
+            switch (number) {
+                case 1:
+                    let price1 = 35000;
+                    alert("Unit price: " + price1);
+                    let quantity1 = +prompt("Enter quantity: ");
+                    alert("Total: " + quantity1 * price1 + " VND");
+                    break;
+                case 2:
+                    let price2 = 25000;
+                    alert("Unit price: " + price2);
+                    let quantity2 = +prompt("Enter quantity: ");
+                    alert("Total: " + quantity2 * price2 + " VND");
+                    break;
+                case 3:
+                    let price3 = 25000;
+                    alert("Unit price: " + price3);
+                    let quantity3 = +prompt("Enter quantity: ");
+                    alert("Total: " + quantity3 * price3 + " VND");
+                    break;
+                case 4:
+                    let price4 = 25000;
+                    alert("Unit price: " + price4);
+                    let quantity4 = +prompt("Enter quantity: ");
+                    alert("Total: " + quantity4 * price4 + " VND");
+                    break;
+                case 5:
+                    let price5 = 10000;
+                    alert("Unit price: " + price5);
+                    let quantity5 = +prompt("Enter quantity: ");
+                    alert("Total: " + quantity5 * price5 + " VND");
+                    break;
+                case 6:
+                    let price6 = 20000;
+                    alert("Unit price: " + price6);
+                    let quantity6 = +prompt("Enter quantity: ");
+                    alert("Total: " + quantity6 * price6 + " VND");
+                    break;
+                default:
+                    break;
+            }
+        }
+    // } while ()
+</script>
+</body>
+</html>

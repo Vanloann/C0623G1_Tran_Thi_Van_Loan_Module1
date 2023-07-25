@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--// tổng 2 đường chéo trong mảng 2 chiều-->
+<script>
+    let arr = [[11, 2, 4], [4, 5, 6], [10, 8, -12]];
+
+    function diagonalDifference(arr) {
+        let sum1 = 0;
+        let sum2 = 0;
+        let count1 = 0;
+        let count2 = 0;
+
+        for (let i = 0; i < arr.length; i++) {
+            sum1 += arr[i][count1];
+            count1++;
+        }
+        for (let i = arr.length - 1; i >= 0; i--) {
+            sum2 += arr[i][count2];
+            count2++;
+        }
+        return Math.abs(sum1 - sum2);
+    }
+//C2
+    function diagonalDifference(arr) {
+        let sum1 = 0;
+        let sum2 = 0;
+        for (let i = 0; i < arr.length; i++) {
+            sum1 += arr[i][i];
+            sum2 += arr[i][(arr.length - 1) - i];
+        }
+        console.log(sum1,sum2)
+        return Math.abs(sum1 - sum2);
+    }
+
+    document.write(diagonalDifference(arr));
+</script>
+</body>
+</html>

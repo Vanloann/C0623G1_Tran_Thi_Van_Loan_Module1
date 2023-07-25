@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    do {
+        let letter = prompt("Nhập ký tự bất kỳ: ");
+        if( letter.length < 2 && isNaN(letter) === true) {
+            if (letter === "o" || letter === "u" || letter === "i" || letter === "a" || letter === "e" ||
+                letter === "O" || letter === "U" || letter === "I" || letter === "A" || letter === "E") {
+                alert("Ký tự bạn nhập là nguyên âm.");
+                break;
+            }
+            else {
+                alert("Ký tự bạn nhập không phải là nguyên âm.");
+                break;
+            }
+        }
+        else {
+            alert("Vui lòng nhập đúng ký tự.")
+        }
+    } while (true)
+
+</script>
+</body>
+</html>
