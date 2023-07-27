@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str1 = "aabbcc";
+    let str2 = "bbncaa";
+
+    function commonCharacterCount(str1, str2) {
+        let newArr = [];
+        let arr1 = str1.split("");
+        let arr2 = str2.split("");
+        debugger
+        for (let i = 0; i < arr1.length; i++) {
+            for (let j = 0; j < arr2.length; j++) {
+                if (arr1[i] === arr2[j]) {
+                    newArr.push(arr1[i]);
+                    arr2.splice(j,1);
+                }
+            }
+        }
+        console.log(newArr);
+
+        let newArr1= [];
+        for (let i = 0; i < newArr.length ; i++) {
+            if (newArr1.indexOf(newArr[i]) === -1) {
+                newArr1.push(newArr[i]);
+            }
+        }
+        console.log(newArr1)
+        document.write("Common characters between 2 strings: " + newArr + "<br/>");
+
+        let arrCount = [];
+        let count = 0;
+        for (let i = 0; i < newArr1.length ; i++) {
+            for (let j = 0; j < newArr.length ; j++) {
+                if (newArr1[i] === newArr[j]) {
+                    count++;
+                }
+            }
+            arrCount.push(count);
+            count = 0;
+            document.write("Frequence of character " + newArr1[i] + ": " + arrCount[i] + "<br/>");
+        }
+        console.log(arrCount)
+    }
+
+    commonCharacterCount(str1, str2);
+    // function: count the number of element's occurrences in string
+    // let sub = str[index];
+    // str.split(sub).length - 1;
+</script>
+</body>
+</html>
