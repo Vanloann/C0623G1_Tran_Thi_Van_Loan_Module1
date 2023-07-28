@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Menu</h3>
+<table>
+    <tr>
+        <td>1.coffee - 22000đ</td>
+    </tr>
+    <tr>
+        <td>2.orange juice - 39000đ</td>
+    </tr>
+    <tr>
+        <td>3.carrot juice - 30000đ</td>
+    </tr>
+    <tr>
+        <td>4.tomato juice - 35000đ</td>
+    </tr>
+    <tr>
+        <td>5.water - 10000đ</td>
+    </tr>
+    <tr>
+        <td>6.coconut juice - 20000đ</td>
+    </tr>
+    <tr>
+        <td>7.End</td>
+    </tr>
+</table>
+<button type="button" onclick="order()">order</button>
+<script>
+    let drinks = [1, 2, 3, 4, 5, 6];
+    let price = [22000, 39000, 30000, 35000, 10000, 20000];
+
+    function order() {
+
+        let amountTotal = 0;
+        do {
+            let amount = 0;
+            let choice = +prompt("input a number of drink you want to choose:");
+            let flag = true;
+            for (let i = 0; i < drinks.length; i++) {
+                if (choice === drinks[i]) {
+                    let quantity = +prompt("input a quantity of drink you want:");
+                    amount = price[i] * quantity;
+                    alert("amount you chosen:" + amount);
+                    flag = false;
+                }
+            }
+
+            amountTotal = amountTotal + amount;
+
+            if (choice === 7) {
+                alert("Total amount you have to pay: " + amountTotal);
+                alert("Thanks for ordering!");
+                break;
+            }
+            if (flag) {
+                alert("yêu cầu nhập lại")
+            }
+
+        } while (true)
+    }
+
+</script>
+</body>
+</html>

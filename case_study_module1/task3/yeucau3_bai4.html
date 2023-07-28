@@ -18,45 +18,52 @@
 
 <script>
     let number;
+
     function order() {
-       let total = 0;
+        let total = 0;
         do {
-            number = +prompt("Vui lòng chọn món: ");
-            switch (number) {
-                case 1:
-                    let price1 = 35000;
-                    let quantity1 = +prompt("Đơn giá: " + price1 + " VND" + ". " + "Vui lòng nhập số lượng: ");
-                    total += quantity1 * price1;
+            number = +prompt("Vui lòng nhập số thứ tự món bạn muốn  : ");
+                switch (number) {
+                    case 1:
+                        let price1 = 35000;
+                        let quantity1 = +prompt("Đơn giá: " + price1 + " VND" + ". " + "Vui lòng nhập số lượng: ");
+                        total += quantity1 * price1;
+                        break;
+                    case 2:
+                        let price2 = 25000;
+                        let quantity2 = +prompt("Đơn giá: " + price2 + " VND" + ". " + "Vui lòng nhập số lượng: ");
+                        total += quantity2 * price2;
+                        break;
+                    case 3:
+                        let price3 = 25000;
+                        let quantity3 = +prompt("Đơn giá: " + price3 + " VND" + ". " + "Vui lòng nhập số lượng: ");
+                        total += quantity3 * price3;
+                        break;
+                    case 4:
+                        let price4 = 25000;
+                        let quantity4 = +prompt("Đơn giá: " + price4 + " VND" + ". " + "Vui lòng nhập số lượng: ");
+                        total += quantity4 * price4;
+                        break;
+                    case 5:
+                        let price5 = 10000;
+                        let quantity5 = +prompt("Đơn giá: " + price5 + " VND" + ". " + "Vui lòng nhập số lượng: ");
+                        total += quantity5 * price5;
+                        break;
+                    case 6:
+                        let price6 = 20000;
+                        let quantity6 = +prompt("Đơn giá: " + price6 + " VND" + ". " + "Vui lòng nhập số lượng: ");
+                        total += quantity6 * price6;
+                        break;
+                }
+                if (number > 7 || number < 0 || isNaN(number) === true) {
+                    alert("Món bạn chọn hiện chưa có trong menu!");
+                }
+                if (number === 7) {
+                    alert("Hoàn tất gọi món!");
+                    alert("Tổng số tiền bạn phải thanh toán: " + total + " VND");
                     break;
-                case 2:
-                    let price2 = 25000;
-                    let quantity2 = +prompt("Đơn giá: " + price2 + " VND" + ". " + "Vui lòng nhập số lượng: ");
-                    total += quantity2 * price2;
-                    break;
-                case 3:
-                    let price3 = 25000;
-                    let quantity3 = +prompt("Đơn giá: " + price3 + " VND" + ". " + "Vui lòng nhập số lượng: ");
-                    total += quantity3 * price3;
-                    break;
-                case 4:
-                    let price4 = 25000;
-                    let quantity4 = +prompt("Đơn giá: " + price4 + " VND" + ". " + "Vui lòng nhập số lượng: ");
-                    total += quantity4 * price4;
-                    break;
-                case 5:
-                    let price5 = 10000;
-                    let quantity5 = +prompt("Đơn giá: " + price5 + " VND" + ". " + "Vui lòng nhập số lượng: ");
-                    total += quantity5 * price5;
-                    break;
-                case 6:
-                    let price6 = 20000;
-                    let quantity6 = +prompt("Đơn giá: " + price6 + " VND" + ". " + "Vui lòng nhập số lượng: ");
-                    total += quantity6 * price6;
-                    break;
-            }
-        } while (number !== 7)
-        alert("Hoàn tất gọi món!");
-        alert("Tổng số tiền bạn phải thanh toán: " + total + " VND");
+                }
+        } while (number < 7)
     }
 </script>
 </body>

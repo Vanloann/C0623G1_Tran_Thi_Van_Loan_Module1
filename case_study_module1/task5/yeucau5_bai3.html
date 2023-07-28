@@ -6,36 +6,43 @@
 </head>
 <body>
 <script>
-    let m = +prompt("Nhập kích thước mảng cha");
-    let n = +prompt("Nhập kích thước mảng con");
-    let arr = [];
-    for (let i = 0; i < m; i++) {
-        arr[i] = [];
-        for (let j = 0; j < n; j++) {
-            arr[i][j] = +prompt("Nhập phần tử của mảng");
-        }
-    }
-    console.log(arr)
-
-    function findMinMaxValue(arr) {
-        let max = arr[0][0];
-        let min = arr[0][0];
-
-        for (let i = 0; i < arr.length; i++) {
-            for (let j = 0; j < arr[i].length; j++) {
-                if (arr[i][j] > max) {
-                    max = arr[i][j];
-                }
-                if (arr[i][j] < min) {
-                    min = arr[i][j];
+    do {
+        let m = +prompt("Nhập kích thước mảng cha");
+        let n = +prompt("Nhập kích thước mảng con");
+        if (m > 0 && n > 0 && isNaN(m) === false && isNaN(n) === false) {
+            let arr = [];
+            for (let i = 0; i < m; i++) {
+                arr[i] = [];
+                for (let j = 0; j < n; j++) {
+                    arr[i][j] = +prompt("Nhập phần tử của mảng");
                 }
             }
-        }
-        document.write("Giá trị lớn nhất: " + max + "<br/>");
-        document.write("Giá trị nhỏ nhất: " + min);
-    }
+            console.log(arr)
 
-    findMinMaxValue(arr)
+            function findMinMaxValue(arr) {
+                let max = arr[0][0];
+                let min = arr[0][0];
+
+                for (let i = 0; i < arr.length; i++) {
+                    for (let j = 0; j < arr[i].length; j++) {
+                        if (arr[i][j] > max) {
+                            max = arr[i][j];
+                        }
+                        if (arr[i][j] < min) {
+                            min = arr[i][j];
+                        }
+                    }
+                }
+                document.write("Giá trị lớn nhất: " + max + "<br/>");
+                document.write("Giá trị nhỏ nhất: " + min);
+            }
+
+            findMinMaxValue(arr)
+            break;
+        } else {
+            alert("Vui lòng nhập đúng kích thước!")
+        }
+    } while (true)
 </script>
 </body>
 </html>

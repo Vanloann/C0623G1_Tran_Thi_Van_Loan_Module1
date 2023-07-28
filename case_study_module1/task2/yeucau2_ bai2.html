@@ -6,16 +6,23 @@
 </head>
 <body>
 <script>
-    let height = +prompt("Nhập chiều cao của tam giác: ");
-    for (let i = 1; i <= height; i++) {
-        for (let j = 1; j <= height + i - 1; j++) {
-            if (j <= height - i) {
-                document.write("&nbsp&nbsp");
-            } else {
-                document.write("*");
+    do {
+        let height = +prompt("Nhập chiều cao của tam giác: ");
+        if (height > 0 && isNaN(height) === false) {
+            for (let i = 1; i <= height; i++) {
+                for (let j = 1; j <= height + i - 1; j++) {
+                    if (j <= height - i) {
+                        document.write("&nbsp&nbsp");
+                    } else {
+                        document.write("*");
+                    }
+                }
+                document.write("<br/>");
             }
+            break;
+        } else {
+            alert("Vui lòng nhập đúng chiều cao!")
         }
-        document.write("<br/>");
         // C2
         // for (let j = 1; j <= height - i; j++) {
         //     document.write("&nbsp&nbsp");
@@ -24,7 +31,7 @@
         //     document.write("*");
         // }
         // document.write("<br/>");
-    }
+    } while (true)
 </script>
 </body>
 </html>

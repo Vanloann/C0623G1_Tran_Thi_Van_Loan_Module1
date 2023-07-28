@@ -6,38 +6,45 @@
 </head>
 <body>
 <script>
-    let str = prompt("Enter string: ");
-
-    function standardizingStr() {
-        let upper = str.toUpperCase();
-        let lower = str.toLowerCase();
-        let str1 = upper[0];
-        for (let i = 1; i < str.length; i++) {
-            if (str[i - 1] === " ") {
-                if (str[1] !== " ") {
-                    str1 += upper[i];
-                } else {
-                    str1 += "";
+    do {
+        let str = prompt("Enter string: ").trim();
+// The trim() method removes whitespace from both side of a string
+        if (isNaN(str) === true && str.length > 1) {
+            function standardizingStr() {
+                let upper = str.toUpperCase();
+                let lower = str.toLowerCase();
+                let str1 = upper[0];
+                for (let i = 1; i < str.length; i++) {
+                    if (str[i - 1] === " ") {
+                        if (str[i] !== " ") {
+                            str1 += upper[i];
+                        } else {
+                            str1 += "";
+                        }
+                    } else {
+                        str1 += lower[i];
+                    }
                 }
-            } else {
-                str1 += lower[i];
-            }
-        }
 
-        let arr = str1.split(" ");
-        console.log(arr);
-        let max = arr[0];
-        for (let i = 1; i < arr.length; i++) {
-            if (arr[i].length > max.length) {
-                max = arr[i];
+                let arr = str1.split(" ");
+                console.log(arr);
+                let max = arr[0];
+                for (let i = 1; i < arr.length; i++) {
+                    if (arr[i].length > max.length) {
+                        max = arr[i];
+                    }
+                }
+                document.write("Before standardizing: " + str + "<br/>");
+                document.write("After standardizing: " + str1 + "<br/>");
+                document.write("The longest word: " + max);
             }
-        }
-        document.write("Before standardizing: " + str + "<br/>");
-        document.write("After standardizing: " + str1 + "<br/>");
-        document.write("The longest word: " + max);
-    }
 
-    standardizingStr(str);
+            standardizingStr(str);
+            break;
+        } else {
+            alert("Please enter again the correct string of characters!");
+        }
+    } while (true)
 </script>
 </body>
 </html>

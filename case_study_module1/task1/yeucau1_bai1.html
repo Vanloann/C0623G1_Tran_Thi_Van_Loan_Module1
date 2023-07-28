@@ -6,22 +6,27 @@
 </head>
 <body>
 <script>
-let salary = +prompt("Nhập lương (đv: triệu đồng): ");
-let tax1 = 5/100;
-let tax2 = 10/100;
-let tax3 = 20/100;
-if (salary < 7) {
-    document.write("Thuế thu nhập: " + tax1*salary + " triệu đồng" + "<br/>");
-    document.write("Lương ròng: " + (salary - (tax1*salary)) + " triệu đồng");
-}
-else if (salary < 15) {
-    document.write("Thuế thu nhập: " + tax2*salary + " triệu đồng" + "<br/>");
-    document.write("Lương ròng: " + (salary - (tax2*salary)) + " triệu đồng");
-}
-else {
-    document.write("Thuế thu nhập: " + tax3*salary + " triệu đồng" + "<br/>");
-    document.write("Lương ròng: " + (salary - (tax3*salary)) + " triệu đồng");
-}
+    do {
+        let salary = +prompt("Nhập lương (đv: triệu đồng): ");
+        if (salary > 0 && isNaN(salary) === false) {
+            let tax1 = 5 / 100;
+            let tax2 = 10 / 100;
+            let tax3 = 20 / 100;
+            if (salary < 7) {
+                document.write("Thuế thu nhập: " + tax1 * salary + " triệu đồng" + "<br/>");
+                document.write("Lương ròng: " + (salary - (tax1 * salary)) + " triệu đồng");
+            } else if (salary < 15) {
+                document.write("Thuế thu nhập: " + tax2 * salary + " triệu đồng" + "<br/>");
+                document.write("Lương ròng: " + (salary - (tax2 * salary)) + " triệu đồng");
+            } else {
+                document.write("Thuế thu nhập: " + tax3 * salary + " triệu đồng" + "<br/>");
+                document.write("Lương ròng: " + (salary - (tax3 * salary)) + " triệu đồng");
+            }
+            break;
+        } else {
+            alert("Vui lòng nhập đúng số lương!")
+        }
+    } while (true)
 </script>
 </body>
 </html>
